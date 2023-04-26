@@ -22,6 +22,9 @@ router.post("/fetchArticles", (req, res) => {
                 author: apiData.articles[i].author,
                 title: apiData.articles[i].title,
                 description: apiData.articles[i].description,
+                urlToImage: apiData.articles[i].urlToImage,
+                publishedAt: apiData.articles[i].publishedAt,
+                content: apiData.articles[i].content,
               });
 
               newArticle.save().then((newDoc) => {
